@@ -25,6 +25,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install coverage pytest
 
       - name: Run tests with coverage
         run: |
@@ -36,8 +37,8 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=tonProjet
-            -Dsonar.organization=tonOrganisation
+            -Dsonar.projectKey=calculatrice-ci-cd   # 👉 remplace par ton vrai projectKey
+            -Dsonar.organization=monorganisation   # 👉 remplace par ton organisation
             -Dsonar.python.coverage.reportPaths=coverage.xml
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
