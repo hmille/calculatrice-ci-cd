@@ -37,8 +37,8 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=calculatrice-ci-cd   # 👉 remplace par ton vrai projectKey
-            -Dsonar.organization=monorganisation   # 👉 remplace par ton organisation
+            -Dsonar.projectKey=calculatrice-ci-cd
+            -Dsonar.organization=monorganisation
             -Dsonar.python.coverage.reportPaths=coverage.xml
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
