@@ -1,10 +1,4 @@
 import pytest
-import sys
-import os
-
-# Ajouter src/ au path Python
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
-
 import calculatrice
 
 def test_addition():
